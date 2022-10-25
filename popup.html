@@ -6,15 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="popup.js">
 </script>
+<style>
+	body{
+		min-width: 314px;
+		 min-height: 200px
+	}#gears{
+		height: 16px;
+		width: 16px;
+	}#freq{
+		text-align:center; 
+		font-size: 2em;
+		font-weight: bold;
+		border: 0;
+		 outline: 0;
+		 background: transparent; 
+		 border-bottom: 2px solid black;
+	}#options{
+		display:none;
+	}#sound{
+		position: relative; 
+		left:5px;
+	}#testSound{
+		height: 16px;
+		width: 16px;
+		position: relative; 
+		left:7px; 
+		top:3px;
+	}#keepNote{
+		position: relative; 
+		left:125px; 
+		bottom:32px;
+	}
+	#setOpts{
+		position: relative; 
+		top:10px; 
+		margin-bottom:20px;
+	}
+</style>
 </head>
-<body style=" min-width: 314px; min-height: 200px;"> 
+<body> 
 
 <div id="water">
-<img id="gears" src="gears.png" height="16" width="16" align="right" />
+<img id="gears" src="gears.png" align="right" />
 <center><h1>Me lembre a cada:</h1></center>
 <center>
-<input id='freq' type='text' size="3" style="text-align:center; font-size: 2em;font-weight: bold;
-				border: 0; outline: 0;background: transparent; border-bottom: 2px solid black;"/>
+<input id='freq' type='text' size="3" />
 <h1>Minutos</h1> 
 
 <input id='waterBtn' type='button' value='Me Lembre!' >
@@ -22,16 +58,16 @@
 <br />
 <input id='stopBtn' type='button' value='Para!'>
 </div>
-<div id="options" style="display:none;">
+<div id="options" >
 <img id="back" src="back.png" height="16" width="16" align="right" />
 <center><h1 >Opções</h1></center>
 <center><h3>Selecione um som:</h3>
-	<select id="sound"  style="position: relative; left:5px;">
+	<select id="sound" >
 		<option value="Default.mp3">Default</option>
 		<option value="sound.mp3">Relax</option>
 	
 	</select>
-	<img id="testSound" src="sound.png" height="16" width="16" style="position: relative; left:7px; top:3px;"/>
+	<img id="testSound" src="sound.png" />
 	<br />
 	<h3>Tipo de Notificação:</h3>
 		<form style="position: relative; bottom:10px;">
@@ -39,8 +75,8 @@
 			<input type="radio" name='noteType' id="optsVisual"  />Visual &nbsp;
 			<input type="radio" name='noteType' id="optsBoth"  checked />Ambos
 		</form> 
-			<h4>Mostar notificação até ela expirar:</h4><input type = "checkbox" id="keepNote" style="position: relative; left:125px; bottom:32px;">
-	<input id="setOpts" type="button" value="Salvar"  style="position: relative; top:10px; margin-bottom:20px;"/>
+			<h4>Mostar notificação até ela expirar:</h4><input type = "checkbox" id="keepNote" >
+	<input id="setOpts" type="button" value="Salvar"  />
 	<br />
 </center>
 </div>
