@@ -1,7 +1,5 @@
-//mmm dat background
 var background = chrome.extension.getBackgroundPage();
 
-//set time
 function setTime(e) {
   var mins = document.getElementById("freq").value;
   if (isNaN(mins) || mins < 1 || mins > 60) {
@@ -15,25 +13,21 @@ function setTime(e) {
   }
 }
 
-//stop this maddness
 function stop(e) {
   background.stop();
   document.getElementById("freq").value = "";
 }
 
-//change to options
 function showOptions() {
   document.getElementById("water").style.display = "none";
   document.getElementById("options").style.display = "block";
 }
 
-//change back to main
 function hideOptions() {
   document.getElementById("water").style.display = "block";
   document.getElementById("options").style.display = "none";
 }
 
-//test the sound
 function testSound() {
   var name = document.getElementById("sound").value;
   var audio = new Audio(name);
